@@ -9,3 +9,8 @@ Hasil diatas diperoleh oleh saya dengan menjalankan cargo run server pada satu t
 ![alt text](image-1.png)
 
 Hasil diatas kurang lebih sama seperti hasil sebelumnya dimana server dapat menerima koneksi dari 3 client yang berbeda. Namun ketika saya coba mengubah port pada kode server, lalu menjalankan run client kembali terjadi error "access is denied". ini terjadi karena server keep track connections dari client di suatu port, sedangkan jika port berbeda maka client mengirimkan request ke port lain sehingga akses tidak terpenuhi dan terjadi error. Ini menunjukkan bahwa Client dan Server hanya dapat berinteraksi dengan lancar jika terhubung ke titik koneksi port yang sama.
+
+## 2.3 Small changes. Add some information to client
+![alt text](image-2.png)
+
+Saya melakukan perbaruan pada kode client dan server supaya dapat menampilkan IP dan Port dari client yang mengirimkan pesan. Ini bertujuan supaya dapat membedakan pesan mana datang dari mana, walaupun karena tiap pengirim tidak memiliki nama untuk di identifikasi maka menggunakan IP dan Port.
